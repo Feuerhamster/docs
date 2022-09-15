@@ -586,4 +586,22 @@ Returns the item count of the collection you're querying, taking the current fil
 
 ### GraphQL
 
-n/a
+::: warning GraphQL
+
+GraphQL does not have meta fields like the REST API.
+As an alternative, you can retrieve the count using Aggregation.
+
+:::
+
+```
+query {
+	articles_aggregated {
+		count {
+			id
+		}
+	}
+}
+```
+
+For more details, see:
+- [Aggregation & Grouping](#aggregation-grouping)
