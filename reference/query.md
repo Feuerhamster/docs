@@ -574,6 +574,15 @@ Returns the total item count of the collection you're querying.
 
 Returns the item count of the collection you're querying, taking the current filter/search parameters into account.
 
+::: warning GraphQL
+
+GraphQL does not have meta fields like the REST API.  
+As an alternative, you can retrieve the count using Aggregation.
+
+For more details, see: [Aggregation & Grouping](#aggregation-grouping)
+
+:::
+
 ### REST API
 
 ```
@@ -586,13 +595,6 @@ Returns the item count of the collection you're querying, taking the current fil
 
 ### GraphQL
 
-::: warning GraphQL
-
-GraphQL does not have meta fields like the REST API.
-As an alternative, you can retrieve the count using Aggregation.
-
-:::
-
 ```
 query {
 	articles_aggregated {
@@ -602,6 +604,3 @@ query {
 	}
 }
 ```
-
-For more details, see:
-- [Aggregation & Grouping](#aggregation-grouping)
